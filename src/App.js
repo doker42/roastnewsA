@@ -5,11 +5,10 @@ import Main from './components/Main.jsx'
 import Footer from './components/Footer.jsx'
 import 'bootstrap/dist/css/bootstrap.css'
 
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 // import createBrowserHistory from "history/createBrowserHistory"
 import FormInputNewsMain from './components/FormInputNewsMain.jsx'
 import UnderHeader from './components/UnderHeader'
-import ShoppingList from './components/ShoppingList'
 
 
 // const history = createBrowserHistory()
@@ -29,7 +28,7 @@ class App extends Component {
 
               <Switch>
 
-                <Route path='/main' component={ Main } />
+                <Route exact path='/' component={ Main } />               
                 
                 <Route path='/newsform' component={ FormInputNewsMain } /> 
 

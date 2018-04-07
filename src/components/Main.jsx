@@ -3,8 +3,6 @@ import './../App.css'
 import FormInputNews from './FormInputNews'
 import NewsList from './NewsList'
 
-import { Link } from 'react-router-dom'
-
 class Main extends React.Component{
 
       constructor(props){
