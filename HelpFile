@@ -1,0 +1,42 @@
+        <div className='newsitem container'>
+  
+          {this.props.data.map((data, index) =>
+
+              <div className="card"  key={index}>
+
+                <div className="card-body">
+
+                  <h5 className="card-title text-left grey">{data.id} {data.title}</h5>
+
+                  <p className="card-text text-left">{data.text}</p>
+
+                  <p className="card-link text-left"><a href={data.url} className="card-link">Go to source</a></p>
+
+                  <p className="card-link text-left mrglft">
+
+                    <button onClick={this.handleFormInputComments} className="btn btn-link btn-sm font">
+                      { !this.state.isOpen ? 'Open CommentForm' : 'CloseCommentForm' }
+                    </button>
+                    
+                    <button onClick={this.handleListComments} className="btn btn-link btn-sm font">Read Comments</button>
+
+                  </p>  
+
+                </div>
+
+                   {  formInputComment }
+
+              </div>
+ 
+          )}
+
+        </div>
+
+
+
+
+
+
+
+
+			<NewsItem data={ this.state.news } />
